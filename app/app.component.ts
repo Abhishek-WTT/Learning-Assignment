@@ -73,13 +73,15 @@ export class AppComponent {
       TREE_DATA.push(this.obj);
       })
       // this.dataSource.data = TREE_DATA;
-      this.dataSource.data = this.firstCase(TREE_DATA) 
+      this.dataSource.data = this.testCase(TREE_DATA) 
       
     })
     console.log(TREE_DATA);
   }
 
-  firstCase(value:any) {
+
+  //Test Case :  Json file is empty or not
+  testCase(value:any) {
       if(!value) {
         console.log('json file is empty');
         
@@ -89,7 +91,10 @@ export class AppComponent {
       }
     }
    
-    //  firstCase(val:any){
+    
+    // Test Case: To check Json is valid or not 
+
+    //  testCase(val:any){
     //    if(val instanceof Array || val instanceof Object) {
     //      console.log("json is valid");
     //      return val;
@@ -98,7 +103,9 @@ export class AppComponent {
     //    }
     // }
   
-    // firstCase(value:any) {
+
+    // Test Case : To check whether json has nested object or not.
+    // testCase(value:any) {
     //   for(let v of value){
     //     if(v.children) {
     //       console.log('json file is nested');
